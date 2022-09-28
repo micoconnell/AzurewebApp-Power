@@ -1,0 +1,33 @@
+api-version: 2019-12-01
+location: westus2
+name: uniqueapp
+properties:
+  containers:
+  - name: streamlitapp
+    properties:
+      image: suncorpowercontainer.azurecr.io/special_capital_r:v15
+      ports:
+      - port: 80
+        protocol: TCP
+      - port: 443
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 2.0
+          memoryInGB: 1.5
+  imageRegistryCredentials:
+  - server: suncorpowercontainer.azurecr.io
+    username: suncorpowercontainer
+    password: pbeZgC+wDtPfVfLfeys8IUhieAiAgPfB
+  restartPolicy: Never
+  ipAddress:
+    ports:
+    - port: 443
+      protocol: TCP
+    - port: 80
+      protocol: TCP
+    type: Public
+    dnsNameLabel: surfshackfun
+  osType: Linux
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
