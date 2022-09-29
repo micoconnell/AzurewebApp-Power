@@ -1,2 +1,10 @@
 pyodbc
 pandas
+streamlit
+matplotlib
+numpy
+calendar
+plotly
+turtle
+tokenize
+tkinter
